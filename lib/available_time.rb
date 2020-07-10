@@ -20,7 +20,6 @@ module AvailableTime
         free_end_time = free_start_time + @interval
         status, conflict_end_time = check_availbility(free_start_time, free_end_time, appointments)
         if status
-          byebug
           key = get_time_of_day(Time.at(free_start_time).hour)
           free_slots[key.to_sym] << [Time.at(free_start_time).strftime("%I:%M %p"), Time.at(free_end_time).strftime("%I:%M %p")]
           curr_time = free_end_time + @rest
@@ -30,8 +29,6 @@ module AvailableTime
       end
       return free_slots
     end
-
-
 
     private
 

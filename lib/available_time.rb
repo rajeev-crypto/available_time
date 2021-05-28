@@ -63,9 +63,9 @@ module AvailableTime
     def get_time_of_day(hour)
       if (hour >= 5 and hour <= 11)
         return "morning"
-      elsif (hour > 11 and hour <= 16)
+      elsif (hour > 11 and hour <= 15)
         return "afternoon"
-      elsif (hour > 16 and hour <= 19)
+      elsif (hour >= 16 and hour <= 19)
         return "evening"
       end
     end

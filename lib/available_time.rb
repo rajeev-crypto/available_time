@@ -65,7 +65,7 @@ module AvailableTime
         return "morning"
       elsif (hour > 11 and hour <= 15)
         return "afternoon"
-      elsif (hour >= 16 and hour <= 19)
+      elsif (hour >= 16 and hour <= 24)
         return "evening"
       end
     end
